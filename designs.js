@@ -5,7 +5,9 @@
 
 function makeGrid() {
 
-// Your code goes here!
+    //assign rows and columns to the height and width input (instantiated in higher scope)
+    rows = document.getElementById("input_height").value;
+    cols = document.getElementById("input_width").value;
 
 }
 
@@ -25,5 +27,7 @@ currentColor.addEventListener("change", function(event) {
     currentColorValue = this.value;
 })
 
+//instantiate the columns and rows variables so they can be used outside of the makeGrid() function
+let cols, rows = 0;
 
 

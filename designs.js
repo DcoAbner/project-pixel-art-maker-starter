@@ -31,12 +31,13 @@ function makeGrid() {
 
 }
 
+
 //submit button and event listener to call the makeGrid function
-let button = document.getElementById("submitButton");
+let button = document.getElementById("sizePicker").getElementsByTagName("input")[2];
 
 button.addEventListener("click", function(event) {
-    makeGrid();
     event.preventDefault();
+    makeGrid();
 })
 
 //currentColor is the form element; currentColorValue is the hex decimal value;

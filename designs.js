@@ -9,6 +9,21 @@ function makeGrid() {
     rows = document.getElementById("input_height").value;
     cols = document.getElementById("input_width").value;
 
+    //string for displaying the table HTML data
+    let tableHTML = "";
+
+    //nested loops for creating the table
+    for (let row = 0; row < rows; row++) {
+        tableHTML += "<tr>";
+        for (let col = 0; col < cols; col++) {
+            tableHTML += "<td></td>"
+        }
+        tableHTML += "</tr>";
+    }
+
+    //adds HTML to the pixel_canvas element to draw the grid
+    document.getElementById("pixel_canvas").innerHTML = tableHTML;
+
 }
 
 //submit button and event listener to call the makeGrid function

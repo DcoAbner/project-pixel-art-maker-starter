@@ -9,8 +9,10 @@ function makeGrid() {
 
 }
 
-let button = document.getElementById("submitButton");
+let button = document.getElementById("sizePicker").getElementsByTagName("input")[2];
 
 button.addEventListener("click", function() {
+    event.preventDefault();
+    alert('done');
     makeGrid();
 })

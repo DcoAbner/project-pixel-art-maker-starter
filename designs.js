@@ -16,13 +16,18 @@ function makeGrid() {
     for (let row = 0; row < rows; row++) {
         tableHTML += "<tr>";
         for (let col = 0; col < cols; col++) {
-            tableHTML += "<td></td>"
+            tableHTML += "<td></td>";
         }
         tableHTML += "</tr>";
     }
 
     //adds HTML to the pixel_canvas element to draw the grid
     document.getElementById("pixel_canvas").innerHTML = tableHTML;
+
+    //event listener to change background color on click
+    document.getElementById("pixel_canvas").addEventListener("click", function(event) {
+        event.srcElement.style.backgroundColor = currentColorValue;
+    })
 
 }
 

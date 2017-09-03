@@ -8,3 +8,9 @@ function makeGrid() {
 // Your code goes here!
 
 }
+
+let button = document.getElementById("submitButton");
+
+button.addEventListener("click", function() {
+    makeGrid();
+})

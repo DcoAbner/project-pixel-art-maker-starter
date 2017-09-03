@@ -14,8 +14,9 @@ function makeGrid() {
 //submit button and event listener to call the makeGrid function
 let button = document.getElementById("submitButton");
 
-button.addEventListener("click", function() {
+button.addEventListener("click", function(event) {
     makeGrid();
+    event.preventDefault();
 })
 
 //currentColor is the form element; currentColorValue is the hex decimal value;
